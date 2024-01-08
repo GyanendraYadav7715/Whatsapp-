@@ -92,7 +92,7 @@ function Mainds() {
     })
     .then(result => {
       // Handle the result of the API call
-        alert(result)
+        alert('Message successfully send');
       //displayResponse(result);
     })
     .catch(error => {
