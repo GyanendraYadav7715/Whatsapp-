@@ -24,10 +24,14 @@ const Navbar = () => {
           <nav>
             {" "}
             {/* This is navbar coding */}
-            <img
-              src={imagePath}
-              alt="Logo"
-            />
+             <div id='logo'>
+              
+              <div id='logo-gola'></div>
+              <div id='logo-text'>
+              <h2>Start-Up</h2>
+              <h4>Way24</h4>
+              </div>
+             </div>
             <div id="nav-part2">
               <h4>
                 <a href="C:\Users\Gyanendra Yadav\Desktop\my-data\src\Component\Main.js">Register</a>
@@ -61,10 +65,9 @@ const Navbar = () => {
             <div className="hero2" />
             <div className="hero3" />
           </div>
-          <video
-            src="https://player.vimeo.com/progressive_redirect/playback/822063732/rendition/1080p/file.mp4?loc=external&signature=79851f90dc501a79b69488c261bfb3c1db78d45a4eba6d058173e6f9576f6186"
-            autoPlay=""
-            loop=""
+          <img
+            src="https://images.unsplash.com/photo-1702575041625-e93d0648b6ac?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             
           />
         </div>
         <div id="page2">
@@ -106,12 +109,9 @@ const Navbar = () => {
               
             </div>
             <div id="page2-right">
-              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg" />
+              <img src="https://plus.unsplash.com/premium_photo-1671599016130-7882dbff302f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               <p>
-                We love to create, we love to solve, we love to collaborate, and we
-                love to turn amazing ideas into reality. We’re here to partner with
-                you through every step of the process and know that relationships are
-                the most important things we build.
+               Our passion is in creation, problem-solving, and collaboration. We thrive on turning fantastic ideas into reality. With us, you're not just a client; you're a partner. We're committed to walking with you through every step of the process because, at StartUpWay24, we believe that relationships are the foundation of everything we build.
               </p>
             </div>
           </div>

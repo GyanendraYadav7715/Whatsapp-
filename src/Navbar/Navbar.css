@@ -23,10 +23,45 @@ body {
 /* this is the main div in which navber exsit*/
 nav {
     width: 100%;
-    padding: 2.3vw 2vw;
+    padding-top: 2.3vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#logo{
+     
+}
+#logo-text{
+    top: 2%;
+     position: absolute;
+     
+   
+}
+#logo-text>h2{
+    
+    font-size:2.3rem ;
+    color: #fe330a;
+    font-weight: 400;
+    
+
+}
+#logo-text>h4{
+   
+    font-size:2.3rem;
+    font-size: 500;
+     
+     
+
+}
+#logo-gola{
+   
+    margin-left: 6vw;
+     margin-top:2vw;
+    height: 4rem;
+    width: 4rem;
+    background-color: #fe330a;
+    border-radius: 50%;
+    filter: blur(5px);
 }
 
 #nav-part2 {
@@ -196,7 +231,7 @@ nav {
 
 }
 
-#page1>video {
+#page1>img{
     border-radius: 20px;
     margin-top: 4vw;
     position: relative;
@@ -336,6 +371,9 @@ nav {
     margin-bottom: 3vw;
 }
 
+ 
+
+  
 #page3-down {
     display: flex;
     align-items: center;
