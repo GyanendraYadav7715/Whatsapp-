@@ -1,33 +1,41 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Neuehaasdisplay roman,sans-serif;
+    font-family: Neuehaasdisplay roman, sans-serif;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
-} 
+}
+
 /* This is css biolerplate. */
-#page1{
+#page1 {
     width: 100%;
-     padding: 0vw 2vw;
+    min-height: 100vh;
+    padding: 0vw 2vw;
     background-color: #efeae3;
     position: relative;
-}  /* this is the main div in which navber exsit*/
-nav{
+}
+
+/* this is the main div in which navber exsit*/
+nav {
     width: 100%;
     padding: 2.3vw 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#nav-part2{
+
+#nav-part2 {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
-#nav-part2 h4{
+
+#nav-part2 h4 {
     padding: 12px 22px;
     border: 1px solid rgba(0, 0, 0, 0.37);
     border-radius: 50px;
@@ -35,53 +43,70 @@ nav{
     font-size: 18px;
     position: relative;
     transition: all ease 0.3s;
-    overflow: hidden;  /*this  property make all thing good */
+    overflow: hidden;
+    /*this  property make all thing good */
 }
-#nav-part2>h4>a{
+
+#nav-part2>h4>a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.776);
-    z-index: 9;  /* this propertey make  the text at upper level*/
+    z-index: 9;
+    /* this propertey make  the text at upper level*/
     position: relative;
 }
-#nav-part2>h4>a:hover{
+
+#nav-part2>h4>a:hover {
     color: white;
 }
-#nav-part2>h4::after{
+
+#nav-part2>h4::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.884);
     left: 0;
-    bottom:-100%;
+    bottom: -100%;
     border-radius: 50%;
     transition: all ease 0.3s;
 }
-#nav-part2>h4:hover::after{
+
+#nav-part2>h4:hover::after {
     bottom: 0;
     border-radius: 0;
-}  /* navbar coding end whith smooth animation and css */
-#center{
+}
+
+/* navbar coding end whith smooth animation and css */
+
+/*content codeing*/
+#center {
     height: 80vh;
     width: 100%;
     background-color: #efeae3;
     display: flex;
-    align-items:flex-end;
-    border-bottom:2px solid black;
+    align-items: flex-end;
+    border-bottom: 2px solid black;
     justify-content: space-between;
     padding-bottom: 2.5vw;
+
 }
-#left>h2{
-    
-     width: 30vw;
-     letter-spacing: -.03em;
-     font-size: 1.86em;
-     font-weight: 600;
-     line-height: 1;
-      
-     
+
+#left>h2 {
+
+    width: 30vw;
+    letter-spacing: -.03em;
+    font-size: 1.86em;
+    font-weight: 600;
+    line-height: 1;
+
+
 }
-#right>h1{
+
+#left>h2>span {
+    color: #fe330a;
+}
+
+#right>h1 {
     padding-right: 4vw;
     z-index: 1;
     letter-spacing: -.05em;
@@ -91,6 +116,242 @@ nav{
     line-height: .9;
     text-align: right;
 }
- 
- 
- 
+
+/*coding end */
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #fe330a;
+    right: 0;
+    top: 85vh;
+    filter: blur(15px);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+
+}
+
+.hero1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fe330a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+
+}
+
+.hero2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background-color: #fe330a;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+.hero3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe330a, #fe7c0af0);
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(60%, -7%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -7%);
+    }
+
+    to {
+        transform: translate(-10%, 30%);
+    }
+
+}
+
+#page1>video {
+    border-radius: 20px;
+    margin-top: 4vw;
+    position: relative;
+    width: 100%;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 5vw 3vw;
+}
+
+#moving-text {
+    padding-top: 6vw;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    display: inline-block;
+
+}
+
+.gola {
+    margin: 1vw 3vw;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #fe330a;
+    display: inline-block;
+}
+
+.con {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#bottom {
+    width: 100%;
+    height: 130vh;
+    margin-top: 7vw;
+    display: flex;
+    align-items: flex-start;
+    background-color: #efeae3;
+    justify-content: space-between;
+    padding: 4vw;
+    position: relative;
+    z-index: 999;
+
+}
+
+#heading-part {
+    width: 60%;
+    position: relative;
+}
+
+#heading-part h1 {
+    flex-wrap: wrap;
+    font-size: 4vw;
+    font-weight: 600;
+    line-height: 1;
+    position: absolute;
+    z-index: 99;
+}
+
+#animation {
+    margin-left: 10vw;
+    margin-top: 5vw;
+    top: 20%;
+    left: 30%;
+    padding: 7vw 6vw;
+}
+
+.hero11 {
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    background-color: #fe330a;
+    filter: blur(25px);
+    position: absolute;
+}
+
+.hero12 {
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    background-color: #fe330a;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes anime {
+    from {
+        transform: translate(-10%, -10%);
+    }
+
+    to {
+        transform: translate(10%, 10%);
+    }
+}
+
+#page2-right {
+    margin-top: 10vw;
+    width: 20%;
+}
+
+
+#page2-right img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 3vw;
+}
+
+#page3-down {
+    display: flex;
+    align-items: center;
+    margin-top: 60vh;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.Gola {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fe330a;
+    filter: blur(5px);
+}
+
+#page3-down h6 {
+    font-size: 15px;
+}
