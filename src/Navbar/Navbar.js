@@ -34,10 +34,10 @@ const Navbar = () => {
              </div>
             <div id="nav-part2">
               <h4>
-                <a href="C:\Users\Gyanendra Yadav\Desktop\my-data\src\Component\Main.js">Register</a>
+                <a href="/register">Register</a>
               </h4>
               <h4>
-                <a href="">Work</a>
+                <a href="/upload">Work</a>
               </h4>
               <h4>
                 <a href="">Sudio</a>
