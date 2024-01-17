@@ -18,7 +18,7 @@ function Page3() {
                 <div id="page2-down">
                     <div class="Gola"></div>
                     <h6>
-                        FEATURED PROJECTS
+                        BUSINESS PROJECTS
                     </h6>
                 </div>
                 <div id="elem-container">
