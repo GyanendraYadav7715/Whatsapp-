@@ -63,7 +63,7 @@ const DropzoneComponent = () => {
       <div className="dropzone-over"></div>
       <div className="dropzone-actions">
         <button type="reset" onClick={handleReset}>Cancel</button>
-        <button type="submit">Save</button>
+        <button type="submit" >Save</button>
       </div>
     </form>
   </div>

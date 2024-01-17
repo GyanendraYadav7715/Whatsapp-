@@ -30,7 +30,7 @@
     transition: color 0.3s ease;
 }
 #left>h4>a:hover{
-    color:white;
+    color:rgba(255, 255, 255, 0.457);
 }
 
 
@@ -72,7 +72,12 @@
     justify-content: center;
     border-bottom: 1px solid whitesmoke;
     padding-bottom: 2vh;
+    transition: color 0.3s ease;
 }
+/* #cover h1:hover{
+    color: rgba(255, 255, 255, 0.71);
+
+} */
 #bom{
     display: flex;
     justify-content: space-between;
