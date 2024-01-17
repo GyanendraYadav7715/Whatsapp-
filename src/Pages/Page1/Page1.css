@@ -1,0 +1,132 @@
+#page1{
+    width: 100%;
+    height:200vh;
+    padding: 0vw 2vw;
+    background-color: #efeae3;
+    position: relative;
+}
+
+/*content codeing*/
+#center {
+    height: 80vh;
+    width: 100%;
+    background-color: #efeae3;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    padding-bottom: 2.5vw;
+
+}
+
+#left>h2 {
+
+    width: 30vw;
+    letter-spacing: -.03em;
+    font-size: 1.86em;
+    font-weight: 600;
+    line-height: 1;
+
+
+}
+
+#left>h2>span {
+    color: #fe330a;
+}
+
+#right>h1 {
+    padding-right: 4vw;
+    z-index: 1;
+    letter-spacing: -.05em;
+    text-transform: uppercase;
+    font-size: 10em;
+    font-weight: 600;
+    line-height: .9;
+    text-align: right;
+}
+
+/*coding end */
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #fe330a;
+    right: 0;
+    top: 70vh;
+    filter: blur(15px);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+
+}
+
+.hero1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fe330a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+
+}
+
+.hero2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background-color: #fe330a;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+.hero3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe330a, #fe7c0af0);
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(60%, -7%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -7%);
+    }
+
+    to {
+        transform: translate(-10%, 30%);
+    }
+
+}
+
+#page1>img{
+    border-radius: 20px;
+    margin-top: 4vw;
+    position: relative;
+    width: 100%;
+}

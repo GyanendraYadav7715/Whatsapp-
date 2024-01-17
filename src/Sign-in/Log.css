@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#111926;
+    --white:#fff;
+    --background:#efeae3;
+    --gray:#d3d3d3;
+}
+
+
+ #form-box-container-hell {
+    position: relative;
+    width:100%;
+    height:100vh;
+    padding: 3vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+#anime {
+    border: 2px dashed black;
+    position:absolute;
+    height:45vw;
+    width: 40vw;
+    z-index: 99;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#hero1 {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(25px);
+    position: absolute;
+}
+
+#hero2 {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes anime {
+    from {
+        transform: translate(-10%, -10%);
+    }
+
+    to {
+        transform: translate(10%, 10%);
+    }
+}
+
+.container1 {
+    
+    z-index: 99;
+    border-radius: 9px;
+    width: 450px;
+    padding: 20px;
+    background-color:transparent;
+     
+  }
+  h1 {
+     
+    text-align: center;
+    font-size:2.7rem;
+    margin-bottom:2rem;
+  }
+  label {
+     
+    display: block;
+    margin-bottom: 8px;
+    font-size:1.3rem;
+    font-weight: bold;
+  }
+   
+   
+  input[type="email"],
+  input[type="password"] {
+    background-color: transparent;
+    box-decoration-break: none;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+     
+    border:none;
+    border-bottom:1px solid black !important;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+     
+  }
+  input[type="email"],
+  input[type="password"]:focus{
+    outline: none;
+  }
+  
+  
+  button[type="submit"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color:rgba(0, 0, 0, 0.775);
+     
+  }
+   
+   
+  .signin {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  .signin a {
+    color: orangered;
+    text-decoration: none;
+    transition:transform 0.3s ease;
+  }
+  .signin a:hover {
+    transform: scale(1.3);
+     
+  }
+
+  

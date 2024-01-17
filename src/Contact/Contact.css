@@ -1,0 +1,93 @@
+#Contact{
+ width: 100%;
+ height: 80vh;
+ background-color:#efeae3 ;
+ padding:3vw 3vw;
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ 
+}
+#map{
+    width: 38%;
+    height: 100%;
+    padding-bottom:2vw;
+    padding-left: 3vw;
+    
+}
+#map iframe{
+    border-radius: 50%;
+    width:33vw; 
+    height:33vw;  
+    border:0;  }
+#address{
+    position: relative;
+    width: 65%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+     
+     
+}
+.glass{position: absolute;
+    display:flex;
+    flex-direction: column;
+    
+    text-align:right;
+    z-index: 99;
+}
+ .glass h1{
+    font-size:6vw;
+}
+  .glass h5{
+    font-size:3vw;
+}
+#animeo {
+     margin-top: 6vh; 
+    position: relative;
+    height: 40vw;
+    width: 40vw;
+     
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#hero121 {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(25px);
+    position: absolute;
+}
+
+#hero222 {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: animey;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes animey {
+    from {
+        transform: translate(-10%, -10%);
+    }
+
+    to {
+        transform: translate(10%, 10%);
+    }
+}

@@ -1,0 +1,142 @@
+#page3{
+   
+    min-height:120vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+#page2-down{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+    padding-left: 3vw;
+    margin-bottom: 1vw;
+}
+.Gola{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color: #fe330a;
+    filter: blur(5px);
+}
+#page2-down h6{
+    font-size:15px;
+}
+#page2-right{
+    margin-top: 10vw;
+    width: 20%;
+}
+#page2-right img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 3vw;
+}
+
+#elem-container{
+    padding-bottom: 3vw;
+}
+.elem{
+    position: relative;
+    width: 100%;
+    height:130px;
+    background-color:#efeae3;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    padding: 0 3vw;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+.elem h2{
+    font-size:3vw ;
+    z-index: 9;
+}
+.overlay{
+    top: -100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    background-color: orange;
+    transition: all ease 0.3s;
+
+}
+.side{
+    z-index: 9;
+}
+.elem:hover .overlay{
+    top: 0;
+
+}
+#fixed-image{
+    height:29vw;
+    width:24vw;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 99;
+    background-color: aqua;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+    
+}
+#Project-button{
+
+    width: 15vw;
+    margin-left: 2vw;
+    padding-bottom: 2vw;
+    
+}
+#Project-button h4{
+    padding: 12px 22px;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden; 
+     /*this  property make all thing good */
+     
+}
+#Project-button h4>div{
+    display: flex; /*this  property make all thing good */
+    align-items: center;
+    gap: 1vw;
+    justify-content: center;
+}
+#Project-button>h4>div>a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.776);
+    z-index: 9;  /* this propertey make  the text at upper level*/
+    position: relative;
+}
+#Project-button>h4>div>i{
+    font-size:2vw;
+    z-index: 9;
+}
+#Project-button>h4>div:hover{
+    color: white;
+}
+#Project-button>h4>div>a:hover{
+    color: white;
+}
+ 
+#Project-button>h4::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+#Project-button>h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+} 
