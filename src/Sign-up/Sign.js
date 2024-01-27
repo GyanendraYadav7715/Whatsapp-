@@ -1,7 +1,7 @@
 
 import "./Sign.css"
 import Navbar from '../Component/Navbar/Navbar'
-import Footer from '../Component/Footer/Footer'
+ 
 
 import { Link } from 'react-router-dom'
 
@@ -44,7 +44,7 @@ function Sign() {
             </div>
         </div>
 
-     <Footer></Footer>
+      
     </>
 
     )

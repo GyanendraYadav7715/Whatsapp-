@@ -11,18 +11,20 @@ nav {
 nav a{
     text-decoration: none;
     color: black;
+    padding: 1vw;
+    
 }
 #logo{
-     width:160px;
+     width:170px;
      height:130px;
      position: relative;
+     
       
       
 }
 #logo-text {
-    padding-top: 2vw;
+    
     border: none;
-    position: absolute;
     z-index: 99;
 }
 
@@ -32,19 +34,20 @@ nav a{
     font-weight: 400;
 }
 
-#logo-text>h4 {
+#logo-text>h2>span {
     font-size: 2.3rem;
-    font-size: 500;
+    font-size: 600;
+    color: black;
 }
 
 #logo-gola {
     position: absolute;
-     right: 1%;
-     top: 35%;
+    right:2%;
+    top:25%;
     height: 4rem;
     width: 4rem;
     background-color: #fe330a;
-     border-radius: 50%;
+    border-radius: 50%;
     filter: blur(5px);
     animation-name:anim;
     animation-direction: alternate;

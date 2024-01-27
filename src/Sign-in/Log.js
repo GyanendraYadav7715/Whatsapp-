@@ -1,7 +1,7 @@
 
 import "./Log.css"
 import Navbar from '../Component/Navbar/Navbar'
-import Footer from '../Component/Footer/Footer'
+ 
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
@@ -55,7 +55,7 @@ function Log() {
             </div>
         </div>
 
-        <Footer></Footer>
+       
     </>
 
     )
