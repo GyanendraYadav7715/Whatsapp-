@@ -6,26 +6,26 @@
  import Home from "./ Home/Home"
  import Log from "./Sign-in/Log"
  import Contact from "./Contact/Contact" 
-  
+import Displaydata from './Component/Displaydata/ConvertTablePage'
+ 
  
  
  function App() {
-  return (<>
-    <Router>
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+      
 
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/register" element={<Sign />} />
-        <Route path="/login" element={<Log/>} />
-        <Route path="/contact" element={<Contact/>} />
-         
-
-      </Routes>
-
-    </Router>
-  </>
+          <Route path="/displaydata" element={<Displaydata />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/register" element={<Sign />} />
+          <Route path="/login" element={<Log />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
  

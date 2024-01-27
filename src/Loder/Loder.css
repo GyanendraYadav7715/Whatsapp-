@@ -1,0 +1,27 @@
+.loader-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.loader-container  h1{
+    
+			position: absolute;
+			top: 50%;
+			left: 50%;
+            transform: translate(-50%,-50%);
+
+
+			font-size: 5vw;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(to right, rgb(255, 111, 0) , rgb(255, 51, 0));
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		
+}
+
+

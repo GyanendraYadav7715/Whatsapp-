@@ -1,10 +1,37 @@
-// ConvertTablePage.js
+import React, { useEffect, useState } from "react";
+import * as XLSX from "xlsx";
 
-import React from 'react';
+const ConvertTablePage = ({ selectedFile }) => {
+  const [tableData, setTableData] = useState(null);
 
-const ConvertTablePage = ({ uploadedData }) => {
+  useEffect(() => {
+    // Check if selectedFile is available
+    if (selectedFile) {
+      // Read the Excel file
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: "array" });
+
+        // Assume the first sheet is the one you're interested in
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+
+        // Convert sheet data to array
+        const dataArray = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Separate header and rows
+        const [header, ...rows] = dataArray;
+
+        setTableData({ header, rows });
+      };
+
+      reader.readAsArrayBuffer(selectedFile);
+    }
+  }, [selectedFile]);
+
   // Check if uploadedData is available
-  if (!uploadedData) {
+  if (!tableData) {
     return (
       <div>
         <h2>No data available</h2>
@@ -12,8 +39,7 @@ const ConvertTablePage = ({ uploadedData }) => {
     );
   }
 
-  // Extract header and rows from the uploadedData
-  const [header, ...rows] = uploadedData;
+  const { header, rows } = tableData;
 
   return (
     <div>
