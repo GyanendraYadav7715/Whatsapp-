@@ -21,6 +21,9 @@ function Navbar() {
             <Link to="/register">Register</Link>
           </h4>
           <h4>
+            <Link to="/login">Log-In</Link>
+          </h4>
+          <h4>
             <Link to="/upload">Work</Link>
           </h4>
           <h4>

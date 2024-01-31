@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import XLSX from "xlsx"; // Import XLSX library for Excel file handling
 import "./Upload.css";
-import 'remixicon/fonts/remixicon.css'
+import "remixicon/fonts/remixicon.css";
 
 const DropzoneComponent = () => {
-   const navigate = useNavigate();
-   
+  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (e) => {
@@ -16,20 +16,20 @@ const DropzoneComponent = () => {
 
   const handleDragOver = (e) => {
     e.preventDefault();
-    e.target.closest('.dropzone-area').classList.add('dropzone--over');
+    e.target.closest(".dropzone-area").classList.add("dropzone--over");
   };
 
   const handleDragLeave = (e) => {
-    e.target.closest('.dropzone-area').classList.remove('dropzone--over');
+    e.target.closest(".dropzone-area").classList.remove("dropzone--over");
   };
 
   const handleDrop = (e) => {
     e.preventDefault();
-    const dropZoneElement = e.target.closest('.dropzone-area');
+    const dropZoneElement = e.target.closest(".dropzone-area");
     if (e.dataTransfer.files.length) {
       updateDropZoneFileList(e.dataTransfer.files[0]);
     }
-    dropZoneElement.classList.remove('dropzone--over');
+    dropZoneElement.classList.remove("dropzone--over");
   };
 
   const updateDropZoneFileList = (file) => {
@@ -37,27 +37,33 @@ const DropzoneComponent = () => {
   };
 
   const handleReset = () => {
-
-   
-
     setSelectedFile(null);
   };
-    const handleSaveClick = (selectedFile) => {
-      if (selectedFile) {
-        console.log("File Data Saved:", selectedFile);
 
-        // After saving, navigate to the new page
-        navigate("/displaydata", { fileData: selectedFile });
-      } else {
-        console.warn("No file data to save.");
-        // You may want to display an error message or take appropriate action
-      }
-    };
+  const handleSaveClick = () => {
+    if (selectedFile) {
+      // Read Excel file
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: "array" });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const tableData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
+        // After parsing, navigate to the new page with table data
+        navigate("/displaydata", { tableData });
+      };
+
+      reader.readAsArrayBuffer(selectedFile);
+    } else {
+      console.warn("No file data to save.");
+      // You may want to display an error message or take appropriate action
+    }
+  };
 
   return (
     <>
-      <div id="uplaod-container-box">
+      <div id="upload-container-box">
         <form action="" className="dropzone-box">
           <h2>Upload and attach file</h2>
           <p>Attach file to this Project</p>
@@ -90,7 +96,7 @@ const DropzoneComponent = () => {
             <button type="reset" onClick={handleReset}>
               Cancel
             </button>
-            <button type="submit" onClick={handleSaveClick}>
+            <button type="button" onClick={handleSaveClick}>
               Save
             </button>
           </div>
