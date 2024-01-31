@@ -1,12 +1,12 @@
  import React from 'react'
  import { BrowserRouter as Router, Route,Routes, } from 'react-router-dom';
  //import Main from "./Component/Excle/Main";
- import Upload from "./Upload/Upload"
- import Sign from "./Sign-up/Sign"
- import Home from "./ Home/Home"
- import Log from "./Sign-in/Log"
- import Contact from "./Contact/Contact" 
-import Displaydata from './Component/Displaydata/ConvertTablePage'
+ import Upload from "./Pages/Upload/Upload"
+ import Sign from "./Pages/Sign-up/Sign"
+ import Home from "./Pages/ Home/Home"
+ import Log from "./Pages/Sign-in/Log"
+ import Contact from "./Pages/Contact/Contact" 
+import Displaydata from './Pages/Displaydata/ConvertTablePage'
  
  
  
