@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import XLSX from "xlsx"; // Import XLSX library for Excel file handling
+import * as XLSX from "xlsx";
+ // Import XLSX library for Excel file handling
 import "./Upload.css";
 import "remixicon/fonts/remixicon.css";
 
@@ -60,6 +61,7 @@ const DropzoneComponent = () => {
       // You may want to display an error message or take appropriate action
     }
   };
+
 
   return (
     <>
